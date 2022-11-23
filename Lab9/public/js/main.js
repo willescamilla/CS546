@@ -10,49 +10,74 @@ Using JavaScript in your browser only, you will listen for the form's submit eve
 -Add a list item to the #results list of result of the sort you have just completed. You will alternate the class for each list item using the classes is-green and is-red (described below), starting with is-green first.
 -If the user does not have a value for the input when they submit, you should not continue processing and instead should inform them of an error somehow.
 */
-let sortForm = document.getElementById('sortForm');
-let formInput = document.getElementById('formInput');
-let errorElem = document.getElementById('error');
-let list = document.getElementById('results');
-let formLabel = document.getElementById('formLabel');
+let sortForm = document.getElementById("sortForm");
+let formInput = document.getElementById("formInput");
+let errorElem = document.getElementById("error");
+let list = document.getElementById("results");
+let formLabel = document.getElementById("formLabel");
 
 if (sortForm) {
-  sortForm.addEventListener('submit', (event) => {
+  sortForm.addEventListener("submit", (event) => {
     event.preventDefault();
     var userInput = formInput.value;
     if (!userInput) {
-        formInput.value = '';
-        errorElem.hidden = false;
-        errorElem.innerHTML = 'You must enter a value';
-        formInput.focus();
-    }
-    else {
-        errorElem.hidden = true;
-        let li = document.createElement('li');
-        if (number==1){
-            li.className = 'not-prime';
-            li.innerHTML = "1 is NOT a prime number";
+      formInput.value = "";
+      errorElem.hidden = false;
+      errorElem.innerHTML = "You must enter a value";
+      formInput.focus();
+    } else {
+      let isValidInput = true;
+
+      if (userInput.indexOf("[") !== 0 || userInput.indexOf("]") === -1) {
+        isValidInput = false;
+      }
+      userInput = userInput.replaceAll("[", " ");
+      userInput = userInput.replaceAll("]", " ");
+      userInput = userInput.replaceAll(" ", "");
+      // Now we should only have stuff and commas:     "2,30,-10,5,8,2,4,5,boo,"
+      let strArr = userInput.split(",");
+      // Now an array [2,30,-10,5,8,2,4,5,boo]
+      for (let i = 0; i < strArr.length; i++) {
+        if (strArr[i] == "" || strArr[i] == "-0") {
+          isValidInput = false;
+          break;
         }
-        else{
-            var isPrime = true;
-            for (var i=2; i<number/2; i++){
-            if (number%i==0){
-                isPrime = false;
-                break;
-            }
-            }
-            if (isPrime){
-            li.className = 'is-prime';
-            li.innerHTML = number + " is a prime number"
-            }
-            else {
-            li.className = 'not-prime';
-            li.innerHTML = number + " is NOT a prime number";
-            }
+        let num = Number(strArr[i]);
+        if (!Number.isInteger(num)) {
+          isValidInput = false;
+          break;
+        }
+      }
+      if (!isValidInput) {
+        formInput.value = "";
+        errorElem.hidden = false;
+        errorElem.innerHTML = "Input was Invalid";
+        formInput.focus();
+      } else {
+        strArr.sort((a, b) => a - b);
+
+        errorElem.hidden = true;
+        let li = document.createElement("li");
+
+        let htmlString = "[";
+        strArr.forEach((item) => {
+          htmlString += item + ",";
+        });
+
+        htmlString = htmlString.substring(0, htmlString.length - 1);
+        htmlString += "]";
+
+        if (list.childNodes.length % 2 == 1) {
+          li.className = "is-green";
+          li.innerHTML = htmlString;
+        } else {
+          li.className = "is-red";
+          li.innerHTML = htmlString;
         }
         list.appendChild(li);
         sortForm.reset();
         formInput.focus();
+      }
     }
   });
 }

@@ -10,38 +10,41 @@ Your page will have a form with the following:
 -A button to submit the form
  -->
 
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Array Sorter</title>
-    <link rel="stylesheet" href="public/css/main.css">
-  </head>
-  <body>
-    <header>
-      <h1>Array Sorter</h1>
-    </header>
-    <main>
-      <div id="error">
-        Error: Invalid Input!
-      </div>
-      <form id="sortForm">
-        <label for="sortForm" id="formLabel">
-            Enter Arrays:
-            <input type="text" id="formInput" name="arraysAsStrings">
-            <button type="submit" id="submit">Submit</button>
-        </label>
-      </form>
 
-      <ul id="results">
-      </ul>
+<head>
+  <meta charset="utf-8">
+  <title>Array Sorter</title>
+  <link rel="stylesheet" href="public/css/main.css">
+</head>
 
-    </main>
-    <footer>
-      <p>William Escamilla</p>
-      <p>CWID 10434656</p>
-    </footer>
-    <script src="public/js/main.js"></script>
+<body>
+  <header>
+    <h1>Array Sorter</h1>
+  </header>
+  <main>
+    <div id="error">
+      Error: Invalid Input!
+    </div>
+    <form id="sortForm">
+      <label for="sortForm" id="formLabel">
+        Enter Comma-Separated Arrays:
+        <input type="text" id="formInput" name="arraysAsStrings">
+        <button type="submit" id="submit">Submit</button>
+      </label>
+    </form>
 
-  </body>
+    <ul id="results">
+    </ul>
+
+  </main>
+  <footer>
+    <p>William Escamilla</p>
+    <p>CWID 10434656</p>
+  </footer>
+  <script src="public/js/main.js"></script>
+
+</body>
+
 </html>

@@ -9,7 +9,7 @@
   "author": "Anton Danylenko 10448226",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3",
+    "express": "^4.18.2",
     "express-handlebars": "^6.0.4"
   }
 }

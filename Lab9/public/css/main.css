@@ -2,8 +2,7 @@
 You will style your page using at least 10 CSS selectors for general CSS styling. You will place the CSS in its own file. You must style the is-green class to make text have a color of #00E676 and is-red class to make text have a color of #FF3D00.
 */
 header {
-    color: blue;
-    font-family: "copperplate";
+    color: rgb(201, 151, 0);
   }
 
   header > h1 {
@@ -37,7 +36,7 @@ header {
   }
   
   #submit {
-    background-color: navy;
+    background-color: rgb(201, 151, 0);
       color: white;
       border: 1px solid black;
     display: block;
@@ -45,15 +44,12 @@ header {
   }
 
   #results {
-    font-size: 1.2em;
-}
-  
-  ul {
-    list-style-type: "😎";
+    font-size: 2em;
+    display: block;
   }
   
   #error {
-    color: orange;
+    color: rgb(255, 0, 0);
     font-weight: bold;
   }
   
