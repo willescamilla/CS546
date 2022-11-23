@@ -1,0 +1,14 @@
+{
+  "name": "cs-546-lab-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Shreyas Keerthi 10443218",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.25.0"
+  }
+}

@@ -1,0 +1,76 @@
+/*This file should have CSS rulesets */
+body {
+    padding: 50px;
+    background-color: rgb(255, 255, 0);
+  }
+  h1 {
+    color: rgb(255, 0, 255);
+    font-size: 60pt;
+    text-align: center;
+  }
+  
+  h2 {
+    color: rgb(255, 0, 255);
+    font-size: 40pt;
+    margin: 0;
+    text-decoration: underline;
+  }
+  
+  p {
+    text-align: center;
+    font-size: 30px;
+  }
+  
+  form {
+    text-align: center;
+  }
+  
+  input {
+    background-color: rgb(255, 0, 255);
+    border-radius: 10px;
+  }
+  button {
+    background-color: white;
+    border-radius: 10px;
+  }
+  label {
+    font-size: 30px;
+    color: rgb(255, 0, 255);
+  }
+  
+  a {
+    color: rgb(59, 232, 232);
+    text-decoration: none;
+    font-size: 30pt;
+  }
+  
+  a:hover {
+    color: rgb(0, 65, 65);
+    text-decoration: underline;
+  }
+  
+  a:visited {
+    color: rgb(0, 0, 0);
+  }
+
+  .another-search {
+    position: relative;
+    bottom: 5px;
+  }
+  
+  dl {
+    text-align: left;
+  }
+  dt {
+    font-size: 30pt;
+    font-weight: bold;
+  }
+  dd {
+    margin-inline: unset;
+    font-size: 20pt;
+  }
+  ul {
+    list-style-type: square;
+  }
+
+  

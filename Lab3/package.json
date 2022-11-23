@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "axios": "^1.1.2"
+  },
+  "name": "cs-546-lab-3",
+  "version": "1.0.0",
+  "description": "My lab 3 module",
+  "main": "app.js",
+  "comments": "I pledge my honor that I have abided by the Stevens Honor System. -William Escamilla",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "William Escamilla 10434656",
+  "license": "ISC"
+}

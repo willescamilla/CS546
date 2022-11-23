@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Prime Number Checker</title>
+
+    <link rel="stylesheet" href="/public/main_styles.css">
+</head>
+
+<body>
+    <main>
+        <header>
+          <h1>Prime Number Checker</h1>
+        </header>
+        <ul id="attempts"></ul>
+        <form method="POST" id="primeForm">
+          <label for="primeForm" class="formLabel">
+            Check if Prime:
+            <input type="number" id="primeInput" name="number">
+            <button type="submit" class="submitButton">Check</button>
+          </label>
+        </form>
+        <div id="error" hidden></div>
+        <footer>
+          <p>Anton Danylenko 10448226</p>
+        </footer>
+    </main>
+    <script src='/public/script.js'></script>
+</body>
+
+</html>
