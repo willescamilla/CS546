@@ -1,0 +1,47 @@
+<!-- 
+Your page should have a few basic user interface elements:
+-A header tag, with an h1 naming your site, with a title for your page
+-A footer with your name, student ID, and any other info about yourself you wish to include
+-A single unordered list with an id of results. All the arrays you have checked so far (until you refresh the page) will appear in this list as list items. Each item in the list will alternate the text colors starting with green, then red, then green, then red etc.
+
+Your page will have a form with the following:
+-A label with a for attribute referencing your input
+-A input with a name and type of text
+-A button to submit the form
+ -->
+
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Array Sorter</title>
+    <link rel="stylesheet" href="public/css/main.css">
+  </head>
+  <body>
+    <header>
+      <h1>Array Sorter</h1>
+    </header>
+    <main>
+      <div id="error">
+        Error: Invalid Input!
+      </div>
+      <form id="sortForm">
+        <label for="sortForm" id="formLabel">
+            Enter Arrays:
+            <input type="text" id="formInput" name="arraysAsStrings">
+            <button type="submit" id="submit">Submit</button>
+        </label>
+      </form>
+
+      <ul id="results">
+      </ul>
+
+    </main>
+    <footer>
+      <p>William Escamilla</p>
+      <p>CWID 10434656</p>
+    </footer>
+    <script src="public/js/main.js"></script>
+
+  </body>
+</html>
