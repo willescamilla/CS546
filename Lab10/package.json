@@ -1,0 +1,20 @@
+{
+    "dependencies": {
+        "bcrypt": "^5.1.0",
+        "express": "^4.18.2",
+        "express-handlebars": "^6.0.6",
+        "express-session": "^1.17.3",
+        "handlebars": "^4.7.7",
+        "mongodb": "^4.12.1"
+    },
+    "name": "cs-546-lab-10",
+    "version": "1.0.0",
+    "description": "My lab 10 module",
+    "main": "app.js",
+    "comments": "I pledge my honor that I have abided by the Stevens Honor System. -William Escamilla",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "author": "William Escamilla 10434656",
+    "license": "ISC"
+}

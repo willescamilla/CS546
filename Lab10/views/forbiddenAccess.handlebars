@@ -1,0 +1,13 @@
+{{!--
+
+If the user is NOT logged in, and 'GET /protected' endpoint is called, you will render this view that displays:
+-Error page saying that the user is not logged in
+
+--}}
+<div>
+    <h1>HTTP Status 403</h1>
+    <p>You are not logged in!</p>
+    {{#if status}}
+        <p>{{{status}}}</p>
+    {{/if}}
+</div>

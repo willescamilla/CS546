@@ -1,0 +1,16 @@
+<h1>Signup</h1>
+<form action="/signup" method="POST" id="signup-form">
+  <label for="signupForm" class="formLabel">
+    Username:
+    <input type="text" id="username" name="username">
+  </label>
+  <label for="signupForm" class="formLabel">
+    Password:
+    <input type="password" id="password" name="password">
+  </label>
+  <button type="submit" class="submitButton">Signup</button>
+</form>
+{{#if error}}
+  <p>{{{error}}}</p>
+{{/if}}
+<a href="/">Already have an account? Click here to log-in</a>
